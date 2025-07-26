@@ -1,0 +1,184 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #fff;
+  color: #333;
+  font-size: 19px;
+}
+
+.navbar {
+  background-color: #3e2723;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-size: 21px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+#hero {
+  background: url('hero-coffee.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 3.5rem;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.menu-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  width: 160px;
+  background-color: #fff3e0;
+  transition: transform 0.3s;
+  font-size: 1.2rem;
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card i {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  color: #5d4037;
+}
+
+.testimonial-slider {
+  max-width: 700px;
+  margin: auto;
+  position: relative;
+}
+
+.testimonial {
+  display: none;
+  font-style: italic;
+  font-size: 1.4rem;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+.gallery-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-img {
+  width: 300px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+.lightbox {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 14px;
+  font-size: 1.2rem;
+}
+
+button {
+  padding: 14px;
+  background-color: #d32f2f;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #b71c1c;
+}
+
+/* Scroll animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Floating animation */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.float-up.visible {
+  animation: floatIn 1s ease forwards;
+}
